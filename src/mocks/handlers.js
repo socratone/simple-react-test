@@ -1,27 +1,27 @@
 import { rest } from 'msw';
 
 export const handlers = [
-  rest.get('/users/1', (req, res, ctx) => {
+  rest.get('https://koreanjson.com/users/1', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
-        name: '이정도'
+        name: '소크라'
       })
     );
   }),
-  rest.get('/users/2', (req, res, ctx) => {
+  rest.get('https://koreanjson.com/users/2', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
-        name: '김재완'
+        name: '테스형'
       })
     );
   }),
-  rest.get('/users/3', (req, res, ctx) => {
+  rest.get('https://koreanjson.com/users/3', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
-        name: '김성은'
+        name: '어디가'
       })
     );
   }),
